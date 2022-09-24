@@ -79,7 +79,6 @@ struct ContentView: View {
                     .frame(width: 200, height: 200)
                     .offset(rocketOffSet)
                 
-                
                 Image(systemName: "globe.asia.australia.fill")
                     .resizable()
                     .frame(width: 500, height: 500)
@@ -117,16 +116,16 @@ struct ContentView: View {
         }
     }
     
-    func setRunRocket(state: RocketState) {
+    private func setRunRocket(state: RocketState) {
         let offSet = state.getRunRocket()
         self.rocketOffSet = CGSize(width: offSet.0, height: offSet.1)
     }
     
-    func setRunPlanet(state: RocketState) {
+    private func setRunPlanet(state: RocketState) {
         let offSet = state.getRunPlanet()
         self.planetOffSet = CGSize(width: offSet.0, height: offSet.1)
     }
-    func setRunStars(state: StarState) {
+    private func setRunStars(state: StarState) {
         let offSet = state.getRunStars()
         self.starsOffSet = CGSize(width: offSet.0, height: offSet.1)
         
